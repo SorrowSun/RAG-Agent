@@ -1,0 +1,21 @@
+# 密钥、数据库密码、Redis 密码等
+.env
+AccessKey*.csv
+# Python 虚拟环境
+venv/
+.venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# IDE 配置
+.idea/
+.vscode/
+
+# 日志
+*.log
+
+# 测试数据库或临时文件
+*.db
