@@ -2,14 +2,12 @@ from fastapi import FastAPI, HTTPException
 from sqlalchemy import text
 from app.core.database import engine
 from app.core.redis_client import redis_client
-from app.tools.tools import generate_code
-from app.auth.auth import router as auth_router
-from app.user.user import router as user_router
 from app.api.api import router as api_router
+
 app = FastAPI(title="RAG 智能问答系统后端")
-app.include_router(auth_router)
-app.include_router(user_router)
 app.include_router(api_router)
+
+
 @app.get("/health")
 def health_check():
     return {"code": 200, "message": "服务运行正常"}
